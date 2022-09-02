@@ -13,7 +13,7 @@ check.addEventListener("click", (ele) => {
 });
 window.onscroll = () => {
   if (window.scrollY >= 550) {
-    header.style.cssText = "background-color : #000";
+    header.style.cssText = "background-color : #1B1B1B";
   } else {
     header.style.cssText = "background-color : transparent";
   }
