@@ -1,0 +1,209 @@
+/*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+General
+ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+:root {
+  --main-color: #2196f3;
+  --main-color-hover: #1787e0;
+  --main-transition: all 0.7s ease-in-out;
+  --animation-up: move-up 1.5s infinite alternate-reverse;
+  --animation-dowm: move-down 1.5s infinite alternate-reverse;
+  --animation-bouncing: bouncing 1.5s infinite;
+  --main-padding-top: 100px;
+  --main-padding-bottom: 100px;
+  --main-background-color: #ececec;
+  --main-box-shadow: 10px 12px 100px 10px rgb(255, 255, 255) inset;
+  --main-p-color: #777;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Raleway", sans-serif;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+/*Mobile Screen*/
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+/*Tab Screen*/
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+/*PC Screen*/
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+@media (min-width: 768px) {
+  .open {
+    right: 100px;
+  }
+}
+
+/*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+Header
+ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
+.header {
+  position: relative;
+  background-color: black;
+  z-index: 2;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+.header .container {
+  height: 72px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header .menue_icon {
+  width: 40px;
+  height: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  transition: var(--main-transition);
+}
+.header .menue_icon span {
+  width: 100%;
+  background-color: #ffe600;
+  height: 3px;
+  border-radius: 1rem;
+  transition: var(--main-transition);
+}
+.header .menue_icon input {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+.header .menue_icon:hover span:nth-child(3) {
+  width: 50%;
+  transition: var(--main-transition);
+}
+.header .menue_icon.active {
+  transition-delay: 0.8s;
+  transform: rotate(45deg) translateY(15px) translateX(-5px);
+}
+.header .menue_icon:hover > span:nth-child(3) {
+  width: 50%;
+}
+.header .menue_icon.active > span:nth-child(3) {
+  width: 0;
+}
+.header .menue_icon.active > span:nth-child(3),
+.header .menue_icon.active > span:nth-child(3) {
+  transition-delay: 0.4s;
+}
+.header .menue_icon.active > span:nth-child(2) {
+  transform: rotateY(10px);
+}
+.header .menue_icon.active > span:nth-child(4) {
+  transform: translateY(-10px) rotate(90deg) translateX(-4px);
+}
+.header .main-nav {
+  position: absolute;
+  min-height: 100vh;
+  right: -100%;
+  top: 0;
+  background-color: #1b1b1b;
+  box-shadow: -8px 0px 10px 0px rgba(17, 18, 20, 0.3);
+  width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: -1;
+  transition: var(--main-transition);
+}
+.header .main-nav li a {
+  padding: 30px 0px;
+  color: #fbfbfb;
+  font-size: 1.2rem;
+  display: block;
+}
+.header .main-nav li a:hover {
+  color: #ffe600;
+}
+
+/*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+Hero
+ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
+.hero {
+  height: 75vh;
+  width: 100%;
+  position: relative;
+  background-image: url("../img/hero.jpg");
+  background-size: cover;
+}
+.hero::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  top: 0;
+  left: 0;
+}
+.hero .container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+}
+.hero h1 {
+  color: #ececec;
+  letter-spacing: 3px;
+  font-family: "Raleway";
+}
+.hero h3 {
+  color: var(--main-p-color);
+  letter-spacing: 2px;
+  font-family: "Raleway";
+  margin-bottom: 30px;
+  font-weight: normal;
+}
+
+.hero .btn > a {
+  background-color: #ffe600;
+  padding: 18px 40px;
+  text-transform: uppercase;
+  font-size: 0.6rem;
+  font-weight: 600;
+  letter-spacing: 0.2rem;
+  border: 1px solid #ffe600;
+  color: black;
+  cursor: pointer;
+}
+.hero .btn > a:hover {
+  background-color: transparent;
+  border: 1px solid #ffe600;
+  color: #fbfbfb;
+}
