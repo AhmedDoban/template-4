@@ -16,7 +16,7 @@ General
   --main-padding-top: 100px;
   --main-padding-bottom: 100px;
   --main-background-color: #f5f5f5;
-  --main-box-shadow: 10px 12px 100px 10px rgb(255, 255, 255) inset;
+  --main-box-shadow: 0px 0px 15px 0px rgba(27, 27, 27, 0.1) ;
   --main-p-color: #777;
 }
 html {
@@ -255,3 +255,56 @@ intro
 /*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
 SERVICES
 ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
+.services {
+  position: relative;
+  padding-top: var(--main-padding-top);
+  padding-bottom: calc(var(--main-padding-bottom)/2);
+  background-color: var(--main-background-color);
+}
+.services .box-container .service-container,
+.services .box-container .all-progress-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.services .box-container .service-container .service-box {
+  text-align: center;
+  padding: 50px 10px 20px 10px;
+  box-shadow: var(--main-box-shadow);
+  background-color: #fff;
+  margin-bottom: 10px;
+}
+.service-box h4 {
+  margin: 30px 0;
+  color: var(--main-color);
+}
+.service-box p {
+  font-size: 13px;
+  padding: 10px;
+  line-height: 1.7rem;
+}
+.services .box-container .progress-box {
+  width: 100%;
+  background-color: #fff;
+  padding: 20px 10px 20px 10px;
+  box-shadow: var(--main-box-shadow);
+  margin-top: 15px;
+}
+.services .box-container .progress-box .progress {
+  width: 100%;
+  background-color: #f5f5f5;
+  height: 6px;
+  margin-top: 5px;
+  border-radius: 1rem;
+  display: flex;
+}
+.services .box-container .progress-box h5 {
+  margin: 10px 1px;
+  color: #2196f3;
+}
+.services .box-container .progress-box .progress span {
+  display: block;
+  background-color: #ffe600;
+  border-radius: 1rem;
+}
