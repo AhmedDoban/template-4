@@ -365,7 +365,7 @@ portfolio
 }
 .portfolio .shuffer li a:hover {
   border-bottom: 2px solid var(--main-a-color);
-  color: #777;
+  color: var(--main-p-color);
 }
 @media (max-width: 768px) {
   .portfolio .shuffer li img {
@@ -441,7 +441,7 @@ portfolio
 video
 ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
 .video {
-  background-color: #777;
+  background-color: var(--main-p-color);
   position: relative;
   padding-top: calc(var(--main-padding-top) * 1.2);
   padding-bottom: calc(var(--main-padding-bottom) * 1.2);
@@ -470,4 +470,110 @@ video
 .video a:hover {
   background-color: var(--main-a-color);
   color: #000;
+}
+/*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+our-team
+ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
+.our-team {
+  position: relative;
+  padding-top: var(--main-padding-top);
+  padding-bottom: var(--main-padding-bottom);
+}
+
+.our-team .box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 30px;
+  margin-bottom: 50px;
+}
+.our-team .box-container .box {
+  box-shadow: var(--main-box-shadow);
+  background-color: #fff;
+}
+.our-team .box-container img {
+  width: 100%;
+}
+.our-team .box-container .box h2 {
+  background-color: var(--main-a-color);
+  padding: 17px 0;
+  opacity: 0.8;
+  text-align: center;
+  font-size: 18px;
+  margin: 0;
+}
+.our-team .box-container .box .info {
+  padding: 20px;
+  text-align: center;
+  color: var(--main-p-color);
+  font-size: 15px;
+  line-height: 1.2;
+  letter-spacing: 1px;
+}
+.our-team .quote-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.our-team .quote-container .box {
+  flex-basis: 45%;
+  background-color: #1b1b1b;
+  padding: 50px;
+  margin-bottom: -25%;
+}
+.our-team .quote-container .box p {
+  font-size: 0.8rem;
+  color: #bababa;
+}
+
+.our-team .quote-container .quote {
+  flex-basis: 45%;
+  text-align: center;
+  margin-top: 15%;
+}
+.our-team .quote-container .quote p {
+  font-size: 0.8rem;
+  color: #1b1b1b;
+  padding: 15px;
+}
+.our-team .quote-container .img {
+  flex-basis: 45%;
+  max-width: 100%;
+}
+.our-team .quote-container .img img {
+  width: 100%;
+}
+.our-team .quote-container .quote p:last-child {
+  text-align: left;
+  color: #000;
+  font-weight: bold;
+}
+.our-team .quote-container .quote:last-child p:last-child {
+  text-align: right;
+  color: #000;
+  font-weight: bold;
+}
+.our-team .yellow {
+  background-color: var(--main-a-color);
+  width: 100%;
+  height: 210px;
+  position: absolute;
+  z-index: -1;
+  bottom: 16%;
+  left: 0;
+}
+@media (max-width: 992px) {
+  .our-team .quote-container {
+    flex-direction: column;
+  }
+  .our-team .yellow {
+    display: none;
+  }
+  .our-team .quote-container .box {
+    margin: 0;
+    text-align: center;
+  }
+  .our-team .quote-container .quote p:last-child,
+  .our-team .quote-container .quote:last-child p:last-child {
+    text-align: center;
+  }
 }
