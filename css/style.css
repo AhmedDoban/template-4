@@ -502,6 +502,9 @@ our-team
   margin: 0;
 }
 .our-team .box-container .box .info {
+  background-image: url("../img/axes-light.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
   padding: 20px;
   text-align: center;
   color: var(--main-p-color);
@@ -576,4 +579,76 @@ our-team
   .our-team .quote-container .quote:last-child p:last-child {
     text-align: center;
   }
+}
+/*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+Footer
+ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
+.footer {
+  position: relative;
+  background-color: #1b1b1b;
+  padding-top: calc(var(--main-padding-top) / 2);
+  padding-bottom: calc(var(--main-padding-bottom) / 2);
+}
+.footer .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 30px;
+}
+.footer .footer-head {
+  margin-bottom: 30px;
+  color: var(--main-a-color);
+  font-size: 1rem;
+  font-weight: normal;
+}
+.footer .box p {
+  color: rgb(199, 194, 194);
+  font-size: 0.7rem;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+.footer .box:first-child p span {
+  color: var(--main-a-color);
+}
+.footer .box ul li a {
+  display: block;
+  margin-bottom: 20px;
+  color: #cacaca;
+  font-size: 0.8rem;
+}
+.footer .box ul li a:hover {
+  color: var(--main-a-color);
+}
+.footer .box > a {
+  display: block;
+  width: 100%;
+  padding: 15px 40px;
+  margin: 30px auto;
+  text-align: center;
+  color: #000;
+  font-weight: bold;
+  border-radius: 5rem;
+  background-color: var(--main-a-color);
+}
+.footer .box > a:hover {
+  background-color: transparent;
+  color: #eee;
+  border: 1px solid var(--main-a-color);
+}
+.footer .box .icon {
+  display: flex;
+  gap: 15px;
+}
+.footer .box .icon a i {
+  color: #000;
+  border-radius: 50%;
+  background-color: #fff;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer .box .icon a:hover i {
+  color: var(--main-a-color);
+  background-color: #777;
 }
