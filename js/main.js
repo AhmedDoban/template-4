@@ -36,3 +36,21 @@ for (let i = 0; i < number.length; i++) {
     }
   }, 1);
 }
+/*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+back-to-top
+ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
+let btn = document.querySelector(".back-to-top");
+btn.addEventListener("click", (e) => {
+  window.scrollTo({
+    top: 0,
+    left: 0,
+    behavior: "smooth",
+  });
+});
+window.onscroll = (ele) => {
+  if (window.scrollY >= 250) {
+    btn.style.cssText = "display : flex";
+  } else {
+    btn.style.cssText = "display : none";
+  }
+};

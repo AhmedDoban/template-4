@@ -86,6 +86,20 @@ p {
   letter-spacing: 1px;
   line-height: 32px;
 }
+.back-to-top{
+  position: fixed;
+  width: 40px;
+  height: 40px;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  background-color: #1787e0;
+  z-index: 999;
+  color: #fff;
+  bottom: 15px;
+  right: 15px;
+  border-radius: 50%;
+}
 /*ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
 Header
 ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ*/
